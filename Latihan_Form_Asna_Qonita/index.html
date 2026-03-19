@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width", initial-scale="1.0">
+    <title>Formulir Pendaftaran Kepanitiaan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body{
+            font-family: poppins;
+            color: white;
+        }
+        .form-container{
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        .form-title{
+            text-align: center;
+            font-weight: 300;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: white;
+        }
+        .form-label{
+            font-weight: 600;
+            color: white;
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+        .form-control{
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            padding: 10px 15px;
+        }
+        .form-control::placeholder{
+            color: #ccc;
+        }
+        .mb-4-custom{
+            margin-bottom: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="formcanvas"></canvas>
+    <div class="container">
+        <div class="form-container">
+            <div class="row justify-content-center mb-0 mt-0">
+                <div class="col-30 col-md-30 text-center">
+                    <img src="images/LogoCSFEST3.png" alt="Logo CSFEST" class="img-fuild logo-animate" style="max-height: 300px;">
+                </div>
+            </div>
+
+                <h2 align="center" class="mt-0"><strong> Form Pendaftaran CSFEST 2026</strong></h2>
+                <br><br>
+            <form>
+                <div class="row mb-4-custom">
+                    <label for="username" class="col-sm-3 col-form-label form-label"><label class="form-label"><i class="bi bi-person-fill me-2"></i>Nama Lengkap</label></label>
+                    <div class="col-sm-9 ">
+                        <input type="text" class="form-control" id="nama" placeholder="Nama Lengkap">
+                    </div>
+                </div>
+
+                <div class="row mb-4-custom">
+                    <label for="nim" class="col-sm-3 col-form-label form-label"><label class="form label"><i class="bi bi-card-text me-2"></i>NIM</label></label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="nim" placeholder="Nomor Induk Mahasiswa">
+                    </div>
+                </div>
+
+                <div class="row mb-4-custom">
+                    <label for="semester" class="col-sm-3 col-form-label form-label"><label class="form label"><i class="bi bi-calendar3 me-2"></i>Semester</label></label>
+                    <div class="col-sm-9">
+                        <input type="tel" class="form-control" id="semester" placeholder="Semester">
+                    </div>
+                </div>
+
+                <div class="row mb-4-custom">
+                    <label for="prodi" class="col-sm-3 col-form-label form-label"><label class="form-label"><i class="bi bi-book me-2"></i>Program Studi</label></label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="prodi" placeholder="Program Studi">
+                    </div>
+                </div>
+
+                <div class="row mb-4-custom">
+                    <label for="jurusan" class="col-sm-3 col-form-label form-label"><label class="form-label"><i class="bi bi-building me-2"></i></label>Jurusan</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="jurusan" placeholder="Jurusan">
+                    </div>
+                </div>
+
+                <div class="row mb-4-custom">
+                    <label for="nomorhp" class="col-sm-3 col-form-label form-label"><label class="form-label"><i class="bi bi-whatsapp me-2"></i>Nomor HP</label></label>
+                    <div class="col-sm-9">
+                        <input type="tel" class="form-control" id="nomorhp" placeholder="Nomor HP">
+                    </div>
+                </div>
+
+                <div class="row mb-4-custom">
+                    <label for="email" class="col-sm-3 col-form-label form-label"><label class="form-label"><i class="bi bi-envelope-at me-2"></i>Email</label></label>
+                    <div class="col-sm-9">
+                        <input type="email" class="form-control" id="email" placeholder="Email">
+                    </div>
+                </div>
+
+                <div class="row mb-4-custom">
+                    <label class="col-sm-3 col-form-label form-label"><label class="form-label"><i class="bi bi-gender-ambiguous me-2"></i>Jenis Kelamin</label></label>
+                    <div class="col-sm-9 d-flex align-items: center;">
+                        <div class="form-check form-check-inline mt-2">
+                            <input class="form-check-input" type="radio" name="jeniskelamin" id="laki" value="Laki-Laki">
+                            <label class="form-check-label" type="radio" for="laki">Laki-Laki</label>
+                        </div>
+                        <div class="form-check form-check-inline mt-2">
+                            <input class="form-check-input" type="radio" name="jeniskelamin" id="perempuan" value="Perempuan">
+                            <label class="form-check-label" type="radio" for="perempuan">Perempuan</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mb-4-custom">
+                    <label class="col-sm-3 col-form-label form-label"><label class="form-label"><i class="bi bi-people me-2"></i>Pilihan Divisi</label></label>
+                    <div class="col-sm-9">
+                        <select class="form-select" id="divisi">
+                            <option selected disabled>Pilih Divisi</option>
+                            <option value="acara">Acara</option>
+                            <option value="pdd">Publikasi dan Dokumentasi</option>
+                            <option value="humas">Humas</option>
+                            <option value="sponsorship">Sponsorship</option>
+                            <option value="konsumsi">Konsumsi</option>
+                            <option value="keamanan">Keamanan</option>
+                            <option value="kesehatan">Kesehatan</option>
+                            <option value="perlengkapan">Perlengkapan</option>
+                            <option value="kompetisi">Kompetisi</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row mb-4-custom">
+                    <label for="pengalaman" class="col-sm-3 col-form-label form-label"><label class="form-label"><i class="bi bi-briefcase me-2"></i>Pengalaman</label></label>
+                    <div class="col-sm-9">
+                        <textarea class="form-control" id="pengalaman" rows="4" placeholder="Sebutkan Pengalaman Kamu"></textarea>
+                    </div>
+                </div>
+
+                <div class="row mb-4-custom">
+                    <label for="kemampuan" class="col-sm-3 col-form-label form-label"><label class="form-label"><i class="bi bi-lightbulb me-2"></i></label>Kemampuan</label>
+                    <div class="col-sm-9">
+                        <textarea class="form-control" id="kemampuan" rows="1" placeholder="Sebutkan Kemampuan Kamu"></textarea>
+                    </div>
+                </div>
+
+                <div class="row mb-4-custom">
+                    <label for="alasan" class="col-sm-3 col-form-label form-label"><label class="form-label"><i class="bi bi-question-circle me-2"></i>Alasan Ikut CSFEST</label></label>
+                    <div class="col-sm-9">
+                        <textarea class="form-control" id="alasan" rows="3" placeholder="Tuliskan Alasan Kamu"></textarea>
+                    </div>
+                </div>
+
+                <div class="row mb-4-custom">
+                    <label for="harapan" class="col-sm-3 col-form-label form-label"><label class="form-label"><i class="bi bi-chat-heart me-2"></i>Harapan</label></label>
+                    <div class="col-sm-9">
+                        <textarea class="form-control" id="harapan" rows="3" placeholder="Apa Harapan Kamu Jika Diterima"></textarea>
+                    </div>
+                </div>
+
+                <div class="row mb-4-custom">
+                    <label for="cvfile" class="col-sm-3 col-form-label form-label"><label class="form-label"><i class="bi bi-file-earmark-pdf me-2"></i>CV</label></label>
+                    <div class="col-sm-9">
+                        <input type="file" name="cvfile" placeholder="PDF " required>
+                    </div>
+                </div>
+
+                <div class="row mb-4-custom">
+                    <label for="portofolio" class="col-sm-3 col-form-label form-label"><label class="form-label"><i class="bi bi-journal-code me-2"></i></label>Portofolio</label>
+                    <div class="col-sm-9">
+                        <input type="url" name="portofolio" placeholder="https://..." required>
+                    </div>
+                </div>
+                
+                <div class="row mb-4-custom">
+                    <label for="linkedin" class="col-sm-3 col-form-label form-label"><label class="form-label"><i class="bi bi-linkedin me-2"></i>LinkedIn</label></label>
+                    <div class="col-sm-9">
+                        <input type="url" name="LinkedIn" placeholder="https://linkedin.com/in/..." required>
+                    </div>
+                </div>
+
+                <div class="row mb-4-custom">
+                    <label for="GitHub" class="col-sm-3 col-form-label form-label"><label class="form-label"><i class="bi bi-github me-2"></i>GitHub</label></label>
+                    <div class="col-sm-9">
+                        <input type="url" name="github" placeholder="https://github.com/..." required>
+                    </div>
+                </div>
+                <br>
+
+                <div class="row justify-content-center mb-5">
+                    <div class="col-md-14">
+                        <div class="p-4 rounded" style="background: #ffffff; box-shadow: 0 0 10px 3px rgba(168, 168, 168, 0.548); border: none;">
+                        <div class="form-check d-flex align-items-center">
+                            <input class="form-check-input me-3" type="checkbox" id="komitmen" required style="width: 22px; height: 22px; flex-shrink: 0; cursor: pointer; border: 1px solid #333;">
+                            <label class="form-check-label" for="komitmen" style="cursor: pointer; color: #000000; font-weight: 500; line-height: 1.5;">
+                                <strong>Saya menyatakan bahwa data tersebut benar dan saya siap untuk mengikuti seluruh rangkaian acara selama berlangsung.</strong> 
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+                <div class="row justify-content-center mb-5">
+                    <div class="col-sm-8 offset-sm-5">
+                        <button type="submit" class="btn">
+                            Daftarkan
+                        </button>
+                    </div>
+                </div>
+                <br><br>
+
+                <h2 align="center" class="mt-4"><strong> Dokumentasi CSFEST 2025</strong></h2>
+                <br>
+
+                <div class="row justify-content-center mt-5">
+                    <div class="col-md-12">
+                        <div class="p-2 border rounded" style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(160, 32, 240, 0.3) !important;">
+                                <div class="custom-slider">
+                                    <div class="slider-item">
+                                        <img src="images/foto1.jpg" alt="Dokumentasi Foto 4">
+                                        <p class="small mt-2 mb-0 text-center">Foto & Video CSFEST 2025</p>
+                                    </div>
+                                    <div class="slider-item">
+                                        <img src="images/foto4.JPG" alt="Dokumentasi Foto 4">
+                                        <p class="small mt-2 mb-0 text-center">Foto & Video CSFEST 2025</p>
+                                    </div>
+                                    <div class="slider-item">
+                                        <img src="images/foto5.JPG" alt="Dokumentasi Foto 5">
+                                        <p class="small mt-2 mb-0 text-center">Foto & Video CSFEST 2025</p>
+                                    </div>
+                                    <div class="slider-item">
+                                        <img src="images/foto6.JPG" alt="Dokumentasi Foto 6">
+                                        <p class="small mt-2 mb-0 text-center">Foto & Video CSFEST 2025</p>
+                                    </div>
+                                    <div class="slider-item">
+                                        <img src="images/foto7.JPG" alt="Dokumentasi Foto 7">
+                                        <p class="small mt-2 mb-0 text-center">Foto & Video CSFEST 2025</p>
+                                    </div>
+                                    <div class="slider-item">
+                                        <img src="images/foto9.JPG" alt="Dokumentasi Foto 9">
+                                        <p class="small mt-2 mb-0 text-center">Foto & Video CSFEST 2025</p>
+                                    </div>
+                                    <div class="slider-item">
+                                        <img src="images/foto10.JPG" alt="Dokumentasi Foto 10">
+                                        <p class="small mt-2 mb-0 text-center">Foto & Video CSFEST 2025</p>
+                                    </div>
+                                    <div class="slider-item">
+                                        <img src="images/foto11.JPG" alt="Dokumentasi Foto 11">
+                                        <p class="small mt-2 mb-0 text-center">Foto & Video CSFEST 2025</p>
+                                    </div>
+                                    <div class="slider-item">
+                                        <img src="images/foto16.JPG" alt="Dokumentasi Foto 16">
+                                        <p class="small mt-2 mb-0 text-center">Foto & Video CSFEST 2025</p>
+                                    </div>
+                                    <div class="slider-item">
+                                        <img src="images/foto17.jpeg" alt="Dokumentasi Foto 17">
+                                        <p class="small mt-2 mb-0 text-center">Foto & Video CSFEST 2025</p>
+                                    </div>
+                                    <div class="slider-item">
+                                        <div class="ratio ratio-16x9">
+                                        <video controls class="rounded">
+                                        <source src="images/Video1.mp4" type="video/mp4" title="Video1">
+                                        </video>
+                                        </div>
+                                        <p class="small mt-2 mb-0 text-center">Foto & Video CSFEST 2025</p>
+                                    </div>
+                    </div>
+                </div>
+                </div>
+            </form>
+        </div>
+    </div>
+        <script src="script.js"></script>
+</body>
+</html>
